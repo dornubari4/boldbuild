@@ -1,7 +1,7 @@
-YAML
+#YAML
 name: python code
 
-Trigger
+#Trigger
 on:
   push:
     branches: [main, feat/learning]
