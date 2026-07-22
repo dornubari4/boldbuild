@@ -21,3 +21,9 @@ jobs:
     - name: Run tests
         run: |
           python -m pytest
+
+    - name: Run Script
+        # Inject the GitHub Secret into the runner's environment variables
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: python script.py
