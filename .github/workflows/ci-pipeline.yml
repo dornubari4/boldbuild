@@ -19,8 +19,8 @@ jobs:
       uses: durandtibo/setup-venv-uv-action@v0.0.3
 
     - name: Run tests
-        run: |
-          python -m pytest
+      run: |
+        python -m pytest
 
     - name: Run Script
         # Inject the GitHub Secret into the runner's environment variables
