@@ -4,9 +4,9 @@ name: python code
 Trigger
 on:
   push:
-    branches: [main,]
-  pull:
-    branches: [main,]
+    branches: [main, feat/learning]
+  pull_request:
+    branches: [main, feat/learning]
 
 jobs: 
  run-tests:
@@ -14,5 +14,10 @@ jobs:
   steps:
     - name: checkout repository code
       uses: actions/checkout@v7
+
     - name: Setup Python environment
-      uses: uses: durandtibo/setup-venv-uv-action@v0.0.3
+      uses: durandtibo/setup-venv-uv-action@v0.0.3
+
+    - name: Run tests
+        run: |
+          python -m pytest
